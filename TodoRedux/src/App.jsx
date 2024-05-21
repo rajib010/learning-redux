@@ -1,6 +1,6 @@
 import React from 'react'
-import AddTodos from './components/AddTodos.jsx'
 import Todos from './components/Todos.jsx'
+import AddTodos from './components/AddTodos.jsx'
 
 
 //when seeing in the redux dev tools , it shows undefined state
