@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
-
-
+import { useDispatch } from 'react-redux'
+import { addAuthUser } from '../store/slice/authSlice';
 function Login() {
 
     const [input, setInput] = useState({ userName: '', password: '' });
+    const dispatch = useDispatch();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setInput({ userName: '', password: '' })
+        dispatch(addAuthUser(input));
+        setInput({ userName: '', password: '' });
     }
 
     const handleChange = (e) => {
